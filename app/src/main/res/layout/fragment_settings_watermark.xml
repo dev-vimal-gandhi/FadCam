@@ -68,7 +68,7 @@
                 android:textColor="?attr/colorHeading"
                 android:textStyle="bold" />
 
-            <!-- Preview Mode Tabs (FadCam / FadRec) — transparent bg, dark ripple -->
+            <!-- Preview Mode Tabs (ServaCam / ServaRec) — transparent bg, dark ripple -->
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/preview_mode_tabs"
                 android:layout_width="match_parent"
@@ -77,6 +77,7 @@
                 android:layout_marginEnd="14dp"
                 android:layout_marginBottom="4dp"
                 android:background="@android:color/transparent"
+                android:visibility="gone"
                 app:tabMode="fixed"
                 app:tabGravity="fill"
                 app:tabIndicatorColor="?attr/colorPrimary"
@@ -88,11 +89,11 @@
                 app:tabRippleColor="#7A000000"
                 android:elevation="0dp">
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tab_fadcam"
-                    android:text="FadCam" />
+                    android:id="@+id/tab_servacam"
+                    android:text="ServaCam" />
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tab_fadrec"
-                    android:text="FadRec" />
+                    android:id="@+id/tab_servarec"
+                    android:text="ServaRec" />
             </com.google.android.material.tabs.TabLayout>
 
             <!-- Preview Cards (ViewPager2 — snappy paging) -->
@@ -105,20 +106,22 @@
                 android:layout_marginBottom="8dp" />
 
             <!-- Page Indicator Dots -->
+            <!-- Page Indicator Dots (Hidden) -->
             <LinearLayout
                 android:id="@+id/preview_page_dots"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:visibility="gone"
                 android:layout_marginBottom="12dp">
                 <View
-                    android:id="@+id/dot_fadcam"
+                    android:id="@+id/dot_servacam"
                     android:layout_width="8dp"
                     android:layout_height="8dp"
                     android:background="@drawable/indicator_dot_active"
                     android:layout_marginEnd="8dp" />
                 <View
-                    android:id="@+id/dot_fadrec"
+                    android:id="@+id/dot_servarec"
                     android:layout_width="8dp"
                     android:layout_height="8dp"
                     android:background="@drawable/indicator_dot_inactive" />

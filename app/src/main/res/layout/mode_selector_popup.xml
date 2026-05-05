@@ -61,9 +61,9 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- FadCam -->
+        <!-- ServaCam -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/mode_fadcam"
+            android:id="@+id/mode_servacam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -92,11 +92,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="FadCam"
+                    android:text="ServaCam"
                     android:textColor="@android:color/white"
                     android:textSize="13sp"/>
                 <TextView
-                    android:id="@+id/check_fadcam"
+                    android:id="@+id/check_servacam"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:fontFamily="@font/materialicons"
@@ -107,13 +107,14 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- FadRec -->
+        <!-- ServaRec (Hidden) -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/mode_fadrec"
+            android:id="@+id/mode_servarec"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
+            android:visibility="gone"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
@@ -137,11 +138,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="FadRec"
+                    android:text="ServaRec"
                     android:textColor="@android:color/white"
                     android:textSize="13sp"/>
                 <TextView
-                    android:id="@+id/check_fadrec"
+                    android:id="@+id/check_servarec"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:fontFamily="@font/materialicons"

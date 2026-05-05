@@ -215,7 +215,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/fadrec_audio_source_title"
+                        android:text="@string/servarec_audio_source_title"
                         android:textStyle="bold"
                         android:textSize="15sp"
                         android:textColor="?attr/colorHeading"/>
@@ -235,7 +235,7 @@
 
                 <View style="@style/SettingsDivider" />
 
-                <!-- Video Splitting Row (shared with FadCam) -->
+                <!-- Video Splitting Row (shared with ServaCam) -->
                 <LinearLayout
                     android:id="@+id/row_video_splitting"
                     style="@style/SettingsGroupRow">

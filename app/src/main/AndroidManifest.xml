@@ -82,35 +82,33 @@
 
 
 
-    <application android:name=".FadCamApplication" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Base.Theme.FadCam" android:requestLegacyExternalStorage="true" android:networkSecurityConfig="@xml/network_security_config" tools:targetApi="q">
+    <application android:name=".ServaCamApplication" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Base.Theme.ServaCam" android:requestLegacyExternalStorage="true" android:networkSecurityConfig="@xml/network_security_config" android:extractNativeLibs="false" tools:targetApi="q">
 
         <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
 
         <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
         </provider>
-        <activity android:name=".SplashActivity" android:exported="true" android:theme="@style/Theme.FadCam.Splash">
+        <activity android:name=".MainActivity" android:launchMode="singleTop" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" android:launchMode="singleTop" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode" android:exported="false" />
-
         <!-- Watch-optimized activity for Wear OS round-screen devices -->
         <activity
             android:name=".ui.WatchMainActivity"
             android:launchMode="singleTop"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
-            android:theme="@style/Base.Theme.FadCam"
+            android:theme="@style/Base.Theme.ServaCam"
             android:exported="false" />
 
         <!-- Transparent editor activities for proper keyboard handling -->
-        <activity android:name="com.fadcam.fadrec.ui.overlay.TextEditorActivity" android:theme="@style/TransparentEditorTheme" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" android:windowSoftInputMode="adjustResize" android:exported="false" />
+        <activity android:name="com.servalabs.cam.fadrec.ui.overlay.TextEditorActivity" android:theme="@style/TransparentEditorTheme" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" android:windowSoftInputMode="adjustResize" android:exported="false" />
 
-        <!-- Faditor Mini video editor -->
-        <activity android:name="com.fadcam.ui.faditor.FaditorEditorActivity" android:theme="@style/Theme.FadCam.FaditorEditor" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" android:exported="false" />
+        <!-- EditorMini Mini video editor -->
+        <activity android:name="com.servalabs.cam.ui.faditor.EditorMiniEditorActivity" android:theme="@style/Theme.ServaCam.EditorMiniEditor" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" android:exported="false" />
 
         <!-- Detective App Icon (Activity Alias) -->
         <activity-alias android:name=".MainActivity.AlternativeIcon" android:enabled="false" android:label="Camera" android:icon="@mipmap/ic_launcher_2" android:roundIcon="@mipmap/ic_launcher_2_round" android:targetActivity=".MainActivity" android:exported="true">
@@ -137,23 +135,16 @@
         </activity-alias>
 
         <!-- MadeInPK App Icon (Activity Alias) -->
-        <activity-alias android:name=".MainActivity.PakistanIcon" android:enabled="false" android:label="FadCam" android:icon="@mipmap/ic_launcher_pakistan" android:roundIcon="@mipmap/ic_launcher_pakistan_round" android:targetActivity=".MainActivity" android:exported="true">
+        <activity-alias android:name=".MainActivity.PakistanIcon" android:enabled="false" android:label="ServaCam" android:icon="@mipmap/ic_launcher_pakistan" android:roundIcon="@mipmap/ic_launcher_pakistan_round" android:targetActivity=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity-alias>
 
-        <!-- $ ~/r00t App Icon (Activity Alias) -->
-        <activity-alias android:name=".MainActivity.FadSecLabIcon" android:enabled="false" android:label="FadSec Lab" android:icon="@mipmap/ic_launcher_fadseclab" android:roundIcon="@mipmap/ic_launcher_fadseclab_round" android:targetActivity=".MainActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
 
         <!-- Noor App Icon (Activity Alias) -->
-        <activity-alias android:name=".MainActivity.NoorIcon" android:enabled="false" android:label="FadCam ++" android:icon="@mipmap/ic_launcher_noor" android:roundIcon="@mipmap/ic_launcher_noor_round" android:targetActivity=".MainActivity" android:exported="true">
+        <activity-alias android:name=".MainActivity.NoorIcon" android:enabled="false" android:label="ServaCam ++" android:icon="@mipmap/ic_launcher_noor" android:roundIcon="@mipmap/ic_launcher_noor_round" android:targetActivity=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -161,7 +152,7 @@
         </activity-alias>
 
         <!-- FadBat App Icon (Activity Alias) -->
-        <activity-alias android:name=".MainActivity.BatIcon" android:enabled="false" android:label="FadCam" android:icon="@mipmap/ic_launcher_bat" android:roundIcon="@mipmap/ic_launcher_bat_round" android:targetActivity=".MainActivity" android:exported="true">
+        <activity-alias android:name=".MainActivity.BatIcon" android:enabled="false" android:label="ServaCam" android:icon="@mipmap/ic_launcher_bat" android:roundIcon="@mipmap/ic_launcher_bat_round" android:targetActivity=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -233,7 +224,7 @@
         </activity-alias>
 
         <!-- Minimal App Icon (Activity Alias) -->
-        <activity-alias android:name=".MainActivity.MinimalIcon" android:enabled="false" android:label="FadCam" android:icon="@mipmap/ic_launcher_minimal" android:roundIcon="@mipmap/ic_launcher_minimal_round" android:targetActivity=".MainActivity" android:exported="true">
+        <activity-alias android:name=".MainActivity.MinimalIcon" android:enabled="false" android:label="ServaCam" android:icon="@mipmap/ic_launcher_minimal" android:roundIcon="@mipmap/ic_launcher_minimal_round" android:targetActivity=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -248,28 +239,26 @@
             </intent-filter>
         </activity-alias>
 
-        <activity android:name=".ui.VideoPlayerActivity" android:theme="@style/Base.Theme.FadCam" />
+        <activity android:name=".ui.VideoPlayerActivity" android:theme="@style/Base.Theme.ServaCam" />
         <activity
             android:name=".ui.WatchVideoPlayerActivity"
-            android:theme="@style/Base.Theme.FadCam"
+            android:theme="@style/Base.Theme.ServaCam"
             android:screenOrientation="portrait"
             android:configChanges="orientation|screenSize" />
         <activity
             android:name=".ui.WatchFullscreenActivity"
-            android:theme="@style/Base.Theme.FadCam"
+            android:theme="@style/Base.Theme.ServaCam"
             android:screenOrientation="portrait"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".ui.ImageViewerActivity" android:theme="@style/Base.Theme.FadCam" />
+        <activity android:name=".ui.ImageViewerActivity" android:theme="@style/Base.Theme.ServaCam" />
         <activity
             android:name=".ui.FullscreenPreviewActivity"
-            android:theme="@style/Base.Theme.FadCam"
+            android:theme="@style/Base.Theme.ServaCam"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:screenOrientation="unspecified"
             android:exported="false" />
         <activity android:name=".ui.WebViewActivity" />
-        <activity android:name=".ui.CloudAccountActivity" 
-            android:theme="@style/Base.Theme.FadCam" 
-            android:exported="false" />
+
         
         <!-- Transparent activity for requesting screen recording permission without bringing app to foreground -->
         <activity 
@@ -306,9 +295,9 @@
 
         <service android:name=".service.RecordsDeletionService" android:exported="false" android:foregroundServiceType="dataSync" />
 
-        <!-- Accessibility screenshot service for FadRec screenshot shortcut -->
+        <!-- Accessibility screenshot service for ServaRec screenshot shortcut -->
         <service
-            android:name=".service.FadRecScreenshotAccessibilityService"
+            android:name=".service.ServaRecScreenshotAccessibilityService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
             android:exported="false">
             <intent-filter>
@@ -319,7 +308,7 @@
                 android:resource="@xml/fadrec_screenshot_accessibility_service" />
         </service>
 
-        <!-- Faditor export service for background video export -->
+        <!-- EditorMini export service for background video export -->
         <service android:name=".ui.faditor.export.ExportService" android:exported="false" android:foregroundServiceType="dataSync" />
 
         <!-- Media button receiver to satisfy MediaSessionCompat requirement for a unique receiver -->
@@ -372,8 +361,8 @@
         <activity android:name=".ui.WhatsNewActivity" android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
 
         <activity 
-            android:name=".ui.FadCamProActivity" 
-            android:theme="@style/FadCamProTheme"
+            android:name=".ui.ServaCamProActivity" 
+            android:theme="@style/ServaCamProTheme"
             android:exported="false" />
 
         <!-- Services and receivers remain unchanged -->
@@ -385,23 +374,23 @@
         <!-- Remote Streaming Service for HTTP LAN streaming -->
         <service android:name=".streaming.RemoteStreamService" android:enabled="true" android:exported="false" android:foregroundServiceType="dataSync" />
 
-        <!-- Screen Recording Service for FadRec feature -->
+        <!-- Screen Recording Service for ServaRec feature -->
         <service android:name=".fadrec.services.ScreenRecordingService" android:enabled="true" android:exported="false" android:foregroundServiceType="mediaProjection|microphone" />
 
-        <!-- Floating controls overlay service for FadRec -->
+        <!-- Floating controls overlay service for ServaRec -->
         <service android:name=".fadrec.ui.FloatingControlsService" android:enabled="true" android:exported="false" />
 
-        <!-- Annotation overlay service for FadRec -->
+        <!-- Annotation overlay service for ServaRec -->
         <service android:name=".fadrec.ui.AnnotationService" android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse" />
 
         <!-- Transparent dialog activity for color picker -->
-        <activity android:name=".fadrec.ui.ColorPickerDialogActivity" android:theme="@style/Theme.FadCam.TransparentDialog" android:excludeFromRecents="true" android:exported="false" />
+        <activity android:name=".fadrec.ui.ColorPickerDialogActivity" android:theme="@style/Theme.ServaCam.TransparentDialog" android:excludeFromRecents="true" android:exported="false" />
 
         <!-- Transparent dialog activity for project naming -->
-        <activity android:name=".fadrec.ui.ProjectNamingDialogActivity" android:theme="@style/Theme.FadCam.TransparentDialog" android:excludeFromRecents="true" android:exported="false" />
+        <activity android:name=".fadrec.ui.ProjectNamingDialogActivity" android:theme="@style/Theme.ServaCam.TransparentDialog" android:excludeFromRecents="true" android:exported="false" />
 
         <!-- Transparent dialog activity for project selection -->
-        <activity android:name=".fadrec.ui.ProjectSelectionDialogActivity" android:theme="@style/Theme.FadCam.TransparentDialog" android:excludeFromRecents="true" android:exported="false" />
+        <activity android:name=".fadrec.ui.ProjectSelectionDialogActivity" android:theme="@style/Theme.ServaCam.TransparentDialog" android:excludeFromRecents="true" android:exported="false" />
 
         <!-- Privacy Black Screen Activity -->
         <activity android:name=".ui.PrivacyBlackActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" android:excludeFromRecents="true" android:exported="false" />
@@ -414,7 +403,7 @@
         
         <receiver android:name=".receivers.TorchToggleReceiver" android:exported="true">
             <intent-filter>
-                <action android:name="com.fadcam.TOGGLE_TORCH"/>
+                <action android:name="com.servalabs.cam.TOGGLE_TORCH"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
@@ -425,7 +414,7 @@
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
                 <action android:name="android.intent.action.TIME_SET" />
-                <action android:name="com.fadcam.widgets.ACTION_UPDATE_CLOCK" />
+                <action android:name="com.servalabs.cam.widgets.ACTION_UPDATE_CLOCK" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/clock_widget_info" />
         </receiver>

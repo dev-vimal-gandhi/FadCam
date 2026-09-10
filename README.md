@@ -444,4 +444,9 @@ We look forward to your contributions!
 - Location reverse geocoding powered by <a target="_blank" href="https://nominatim.org/">Nominatim</a> — free, open-source geocoding based on <a target="_blank" href="https://www.openstreetmap.org/">OpenStreetMap</a> data. Building-level precision (zoom=18) for accurate address watermarking.
 - QR codes generated using <a target="_blank" href="https://www.qrcodechimp.com">QRCodeChimp</a>.
 
+## Live Portfolio
+
+Visit the live portfolio: [https://vimal-gandhi.vercel.app](https://vimal-gandhi.vercel.app)
+
+This site showcases Vimal Gandhi's full-stack development work across web apps, mobile apps, Shopify, WordPress, cloud infrastructure, and Web3 projects.
 
